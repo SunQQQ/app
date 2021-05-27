@@ -36,4 +36,10 @@ module.exports = {
         // 把js引入标签放在body里
         inject: "body"
     })],
+    // 添加开发服务器，启动方式npx webpack serve
+    devServer: {
+        contentBase: path.join(__dirname,'dist'),
+        compress:true,
+        port:9000
+    }
 };
