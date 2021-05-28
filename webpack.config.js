@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     mode:'development',
-    entry: "./src/components/layer/runoob1.js",
+    entry: "./src/app.js",
     // 设置输出文件
     output: {
         path: path.resolve(__dirname,'dist'),
@@ -27,6 +27,22 @@ module.exports = {
                 },
                 exclude: /node_modules/,
             },
+            {
+                test:/\.css$/,
+                use:[
+                    // 执行熟悉从下到上，先css再style，颠倒会报错
+                    {loader: "style-loader"},
+                    {loader: "css-loader"}
+                ],
+            },
+            {
+                test:/\.html$/,
+                use:[{loader: "html-loader"}]
+            },
+            {
+                test:/\.hbs$/,
+                use:[{loader: "html-loader"}]
+            }
         ],
     },
     // 使用插件，自动创建根html。该html会自动引入编译后的入口js，且未编译的根index.html不需要引入入口js

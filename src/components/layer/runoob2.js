@@ -1,1 +1,0 @@
-module.exports = "It works from runoob2.js.测试测试";
