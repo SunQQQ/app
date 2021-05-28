@@ -31,5 +31,5 @@ console.log($('未崩'));
 var Handlebars = require('handlebars');
 const source = $("#entry-template").html();
 const template = Handlebars.compile(source);
-$('#Template').html(template({ title: "我的新文章", body: "这是我的第一篇文章！" }));
+$('#Template').html(template({ title: "热加载是真滴爽", body: "这是我的第一篇文章！" }));
 
