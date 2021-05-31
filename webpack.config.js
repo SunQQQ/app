@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     mode:'development',
-    entry: "./src/app.js",
+    entry: "./src/main.js",
     // 设置输出文件
     output: {
         path: path.resolve(__dirname,'dist'),

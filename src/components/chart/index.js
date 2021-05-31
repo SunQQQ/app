@@ -1,8 +1,15 @@
 // 画图
+import Handlebars from "handlebars";
+var myChart;
+import $ from "jquery";
 import * as Echarts from "echarts";
-import chartContent from './index.hbs'
+import tpl from './index.hbs'
 
 function Char(){
+    var Compile = Handlebars.compile(tpl);
+    var Compiled = Compile({ title: "笨小孩"});
+    $("#main").html(Compiled);
+
     var data = {
         title: {
             text: 'ECharts 入门示例'
@@ -21,10 +28,9 @@ function Char(){
             data: [5, 20, 36, 10, 10, 20]
         }]
     };
-    console.log(chartContent);
-// var myChart = Echarts.init($('#main')[0]);
-//     var myChart = Echarts.init(chartContent);
-//     myChart.setOption(data);
+    myChart = Echarts.init($('#ChartDiv')[0]);
+
+    myChart.setOption(data);
 }
 
 export default Char;
