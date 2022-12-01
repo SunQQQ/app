@@ -1,7 +1,7 @@
 import list from "../components/list/index";
 import chart from "../components/chart/index"
 import index from "../components/index/index"
-import promise from "../components/promise/index"
+import promiseAll from "../components/promiseAll/index"
 import $ from "jquery";
 
 var routes = [
@@ -18,8 +18,8 @@ var routes = [
         name:list,
     },
     {
-        path:'#promise',
-        name:promise
+        path:'#promiseAll',
+        name:promiseAll
     }
 ];
 
