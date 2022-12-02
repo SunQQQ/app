@@ -1,7 +1,8 @@
 import list from "../components/list/index";
-import chart from "../components/chart/index"
-import index from "../components/index/index"
-import promiseAll from "../components/promiseAll/index"
+import chart from "../components/chart/index";
+import index from "../components/index/index";
+import promiseAll from "../components/promiseAll/index";
+import $extend from "../components/$extend/index"
 import $ from "jquery";
 
 var routes = [
@@ -20,6 +21,10 @@ var routes = [
     {
         path:'#promiseAll',
         name:promiseAll
+    },
+    {
+        path: "#extend",
+        name: $extend
     }
 ];
 
