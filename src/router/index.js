@@ -6,7 +6,7 @@ import $extend from "../components/$extend/index";
 import middle from "../components/middle/index";
 import $ from "jquery";
 
-var routes = [
+let routes = [
     {
         path: '/',
         name:index
@@ -33,22 +33,27 @@ var routes = [
     }
 ];
 
-function router(){
+let router = () => {
     if(!location.hash){
         index();
     }
     window.onhashchange = function (){
-        var UrlHash = location.hash;
-        if(UrlHash){
-            $.each(routes,function (i,item){
-                if(item.path == UrlHash){
-                    item.name();
-                }
-            });
-        }
+        loadModule(routes);
     }
+    window.onload = function(){
+        loadModule(routes);
+    }
+}
 
-
+let loadModule = (myRoute) => {
+    let UrlHash = location.hash;
+    if(UrlHash){
+        $.each(myRoute,function (i,item){
+            if(item.path == UrlHash){
+                item.name();
+            }
+        });
+    }
 }
 
 export default router;
