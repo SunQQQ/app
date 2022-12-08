@@ -7,7 +7,7 @@ module.exports = {
     // 设置输出文件
     output: {
         path: path.resolve(__dirname,'dist'),
-        filename: "js/[name]]]]h5.js"
+        filename: "js/[name].js"
     },
     // 解决fs报错
     resolve: {
