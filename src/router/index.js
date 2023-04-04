@@ -35,9 +35,10 @@ let routes = [
 
 let router = () => {
     if(!location.hash){
-        index();
+        index(routes);
     }
     window.onhashchange = function (){
+        
         loadModule(routes);
     }
     window.onload = function(){
@@ -52,6 +53,7 @@ let loadModule = (myRoute) => {
             if(item.path == UrlHash){
                 item.name();
             }
+            debugger
         });
     }
 }

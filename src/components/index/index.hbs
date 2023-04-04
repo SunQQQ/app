@@ -1,3 +1,10 @@
 <div>
-    这是首页兄嘚
+    首页
+    {{#each menu}}
+        <li>
+            <a href="{{this.path}}">
+                {{@key}} - {{this.path}}
+            </a>
+        </li>
+    {{/each}}
 </div>
